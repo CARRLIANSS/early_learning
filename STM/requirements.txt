@@ -1,0 +1,10 @@
+torch==1.7.1
+tqdm
+yacs
+progress
+imgaug
+pyyaml
+pillow
+opencv-python
+tensorboard
+numpy

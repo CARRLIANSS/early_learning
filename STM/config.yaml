@@ -1,0 +1,38 @@
+trainset: ['DAVIS17', 'YoutubeVOS']
+valset: 'DAVIS17'
+datafreq: [5, 1]
+input_size: [480, 854]
+frames_sampled: 3
+max_skip: [1, 1]
+video_sampled: 1
+
+keydim: 128
+valdim: 512
+arch: resnet50
+save_freq: 5
+increment_per_epoches: 10
+
+epoches: 240
+train_batch: 1
+learning_rate: 0.00001
+momentum: [0.9, 0.999]
+optimizer: 'adam'
+weight_decay: 5e-4
+iter_size: 4
+loss: 'both'
+mode: 'recurrent'
+iou_threshold: 0.65
+
+epoch_per_test: 1
+correction_rate: 180
+loop: 10
+
+checkpoint: './checkpoint'
+pretrain: './stm_cycle_100.pth'
+resume: ''
+video_path: ''
+mask_path: ''
+gpu_id: 5
+save_indexed_format: 'index'
+output_dir: './output'
+log_dir: './logs'
